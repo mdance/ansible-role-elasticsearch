@@ -51,6 +51,15 @@ elasticsearch_extra_options: |  # Dont forget the pipe!
   another.option: false
 ```
 
+    elasticsearch_extra_jvm_options: ''
+
+A placeholder for arbitrary configuration options for the jvm. This will be appended as-is to the end of the `jvm.options` file, as long as your variable preserves formatting with a `|`. For example:
+
+```yaml
+elasticsearch_extra_jvm_options: |  # Dont forget the pipe!
+  -XX:+UseG1GC
+```
+
 ## Dependencies
 
   - geerlingguy.java
